@@ -147,6 +147,7 @@ WHERE student_id = 5;
 - **SUBSTRING(var, start, n)** - Grabs the characters starting from start and grabs the next n characters(including start). Ex. Leslie -> **SUBSTRING(first_name,3,2)** -> sl
   - **Left(var, n)** - Only grabs the first n characters from the left
   - **RIGHT(var, n)** - Only grabs the last n characters from the right
+- **LENGTH(str)** - Gets the length of a string
 - **REPLACE(var, str_search, str_replace)** - Searches for a string then replaces it
 - **LOCATE(search, str/var)** - Searches for the index of the character in the string/variable
 - **CONCAT(var1, var2, var3, …)** - Combines row data into one string
