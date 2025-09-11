@@ -76,9 +76,17 @@ DELETE FROM student
 WHERE student_id = 5;
 ```
 
+### Aggregate Functions
+
+- **COUNT(field_name)** - Allows you to get a total count of all the rows with the chosen field_name. This can also be substituted with an asterisk(*) to get a count of all the rows regardless of field_name.
+- **SUM(field_name)** - Allows you to get a total sum of all the values in the chosen field
+- **MAX(field_name)** - Allows you to get the max value within the chosen field
+- **MIN(field_name)** - Gets the minimum value of the chosen field
+- **AVG(field_name)** - Gets the average of the chosen field
+
 ### Keyword Library
 
-![Keyword order table](images/order.jpg)
+![Keyword order table](https://www.thedataschool.co.uk/content/images/2023/01/image-264.png)
 
 - **SELECT** - Allows you to select certain data from a database
   - To see the entire table, you can do **SELECT \***
@@ -118,7 +126,7 @@ WHERE student_id = 5;
   - Can also do like this and it will produce the same result: **AVG(age) avg_age**
 - JOIN - Used to combine rows from two or more tables based on a related column
   - **ON** - Used beneath the INNER JOIN clause where you decide what is equal
-  - **(INNER) JOIN** - Returns recorder matching in both tables
+  - **(INNER) JOIN** - Returns records matching in both tables
   - **LEFT (OUTER) JOIN** - Returns all from left table(FROM clause) and matches from right
   - **RIGHT (OUTER) JOIN** - Same as left but reverse
   - **FULL (OUTER) JOIN** - Returns all records when there is a match in either table
@@ -126,9 +134,11 @@ WHERE student_id = 5;
   - Allows only distinct values by default
   - Can do **UNION ALL** if you want to allow duplicate values
   - Syntax:
-    - **SELECT column_name(s) FROM table1**
-    - **UNION ALL**
-    - **SELECT column_name(s) FROM table2;**
+  - ```sql
+    **SELECT column_name(s) FROM table1**
+    **UNION ALL**
+    **SELECT column_name(s) FROM table2;**
+    ```
 - **UPPER( str )** - Changes to all uppercase
 - **LOWER( str )** - Changes to all lowercase
 - **TRIM( str )** - Removes whitespace from leading and trailing spaces
@@ -149,6 +159,15 @@ WHERE student_id = 5;
   - **END;**
     - Can also use **BETWEEN** to find things between two values
     - Ex. **BETWEEN 31 AND 50**
+   
+### Subqueries
+
+- Sometimes, you may need two do two separate queries and combine them into one like if you wanted to get products where the list price is greater than the average list price. This isn't possible in one query since this requires you to compare a value with an aggregate function which isn't possible. This can be done with a subquery like this:
+  - ```sql
+    SELECT ProductName, ListPrice
+    FROM Product
+    WHERE ListPrice > (SELECT AVG(ListPrice) FROM Product);
+    ```
 
 ### Window Functions
 
