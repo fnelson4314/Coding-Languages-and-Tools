@@ -124,7 +124,7 @@ WHERE student_id = 5;
 - **AS** - Can go after any variable to change its name to something else
   - Ex. **AVG(age) AS avg_age**
   - Can also do like this and it will produce the same result: **AVG(age) avg_age**
-- JOIN - Used to combine rows from two or more tables based on a related column
+- **JOIN** - Used to combine rows from two or more tables based on a related column
   - **ON** - Used beneath the INNER JOIN clause where you decide what is equal
   - **(INNER) JOIN** - Returns records matching in both tables
   - **LEFT (OUTER) JOIN** - Returns all from left table(FROM clause) and matches from right
@@ -139,6 +139,8 @@ WHERE student_id = 5;
     **UNION ALL**
     **SELECT column_name(s) FROM table2;**
     ```
+- **DATEDIFF(datepart, startdate, enddate)** - Gets the difference in dates of two dates where datepart is what to go off of (day(default if nothing put for datepart), month, year, hour, minute, second)
+  - Ex. **DATEDIFF(day, '2025-01-01', '2025-09-10')**
 - **UPPER( str )** - Changes to all uppercase
 - **LOWER( str )** - Changes to all lowercase
 - **TRIM( str )** - Removes whitespace from leading and trailing spaces
