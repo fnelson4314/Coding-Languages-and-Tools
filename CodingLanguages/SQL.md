@@ -95,6 +95,8 @@ WHERE student_id = 5;
       - Ex. **WHERE CustomerName LIKE ‘a%’;**
     - \_ sign represents one, single character
       - Ex. **WHERE city LIKE ‘L_nd\_\_’;**
+  - **BETWEEN** - Used to look for a result between two values
+    - Ex. **WHERE year BETWEEN 1900 and 1950;**
 - **FROM** - Used to specify which table to select or delete data from
 - **GROUP BY** - Groups rows that have the same values into summary rows
   - Usually used with aggregate functions **(COUNT(), MAX(), MIN(), SUM(), AVG())**
@@ -104,7 +106,7 @@ WHERE student_id = 5;
     GROUP BY Country; -- This will return how many of each country there is
     ```
 - **ORDER BY** - Used to sort the result-set in ascending or descending order
-  - Add **ASC** at the end for it to be in ascending order
+  - Add **ASC** at the end for it to be in ascending order(default)
   - Add **DESC** at the end for descending order
   - Can use column indexes instead of full variable names(SQL is 1-indexed)
 - **HAVING** - Same thing as the WHERE keyword but it works with aggregate functions since WHERE can’t
