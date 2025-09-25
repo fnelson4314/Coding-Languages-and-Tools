@@ -4,7 +4,9 @@ Included so far is:
 - C
 - SQL
 - YAML/Ansible
+- AWS
 - Bootstrap
+- C++
 - Django
 - Docker
 - Git
